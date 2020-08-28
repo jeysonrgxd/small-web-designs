@@ -1,0 +1,49 @@
+ .card_categoria,
+ .card_destacado,
+ .card_imperdible,
+ .card_loading {
+    animation: fadeIn 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+ }
+
+ .card_loading {
+    background: white;
+    box-shadow: 3px 3px 6px #0000003b;
+    border: 1px solid #00000014;
+    position: relative;
+    padding: 16px;
+    width: 250px;
+ }
+
+ @keyframes fadeIn{
+    0% {
+       opacity: 0;
+    }
+
+    100% {
+       opacity: 100%;
+    }
+ }
+ 
+ .placeload-background {
+    animation-duration: 1.4s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-name: placeHolderShimmer;
+    animation-timing-function: linear;
+    background: #f6f7f8;
+    background: linear-gradient(to right, #eee 8%, #ddd 18%, #eee 33%);
+    background-size: 1000px 104px;
+    height: 50px;
+    position: relative;
+    overflow: hidden;
+ }
+
+ @keyframes placeHolderShimmer{
+    0% {
+       background-position: -300px 0;
+    }
+
+    100% {
+       background-position: 300px 0;
+    }
+ } 

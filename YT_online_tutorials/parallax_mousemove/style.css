@@ -38,5 +38,5 @@ section h2{
    color: #fff;
    font-size: 8em;
    text-shadow: 0 5px 10px rgba(0,0,0,.2);
-   transform: translate(calc(100% - var(--x)*2), -50%);
+   transform: translate(calc(100% - var(--x)*1.2), -50%);
 }
