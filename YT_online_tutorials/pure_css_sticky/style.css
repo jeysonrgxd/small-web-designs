@@ -1,0 +1,31 @@
+body {
+   background-color: #333;
+   color: white;
+}
+
+.container{
+   position: relative;
+
+}
+
+.container section{
+   position: relative;
+   margin-bottom: 50px;
+}
+
+.container section .sticky{
+   position: sticky;
+   top: 0;
+   font-size: 2em;
+   
+}
+
+.container section:nth-child(1) .sticky{
+   background-color: crimson;
+}
+.container section:nth-child(2) .sticky{
+   background-color: darkviolet;
+}
+.container section:nth-child(3) .sticky{
+   background-color: orangered;
+}
