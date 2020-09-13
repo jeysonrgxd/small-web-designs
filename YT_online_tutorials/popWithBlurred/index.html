@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <div class="container">
+      <div class="content">
+         <h2>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim consectetur, corrupti quibusdam temporibus quidem reiciendis suscipit accusamus quod nobis adipisci?</h2>
+         <img src="universe.jpg" alt="">
+         <a href="#" onclick="toggle()">Read More</a>
+      </div>
+   </div>
+   <div class="popup">
+      <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, eius?</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, iste nisi placeat illum nostrum deserunt iure enim sequi ipsum cupiditate qui maiores distinctio, sed tenetur, quibusdam facilis! Incidunt temporibus quas repellendus eum dolorem laboriosam quidem tempore aspernatur! Non laborum necessitatibus, ratione ipsum temporibus natus quam illo est nostrum! Sint, harum.</p>
+      <a href="#" onclick="toggle()">close</a>
+   </div>
+   <script>
+      function toggle(){
+         let blur = document.querySelector(".container")
+         let blur2 = document.querySelector(".popup")
+
+         blur.classList.toggle("active")
+         blur2.classList.toggle("active")
+      }
+   </script>
+</body>
+</html>

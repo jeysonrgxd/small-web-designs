@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+   <input type="checkbox" id="switch-input" class="checkbox">
+   <label for="switch-input" class="switch"></label>
+
+   <h1>Button/Dark Theme</h1>
+   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis vitae distinctio eos blanditiis vel quos corporis tempore magnam a aut ipsum est excepturi praesentium voluptates perferendis fugiat quae deleniti ducimus quod optio facere architecto, amet consectetur aperiam. Voluptatum ipsam molestiae eveniet deleniti aliquam, quibusdam nisi aspernatur dolor doloribus labore inventore.</p>
+
+
+   <script>
+      const styles = document.documentElement.style
+
+      const ligthTheme = {    
+         '--bg-color':"#eee",
+         '--text-color':"#333"
+      }
+      
+      const darkTheme = {
+         '--bg-color':"#333",
+         '--text-color':"#eee"
+      }
+      
+
+      const changeTheme = (theme) => {
+         // obtenemos los nombres de los atributos del objeto
+         const customStyles = Object.keys(theme)
+         for (const style of customStyles) {
+            styles.setProperty(style,theme[style])
+         }
+      }
+
+      let input_checked = document.getElementById("switch-input")
+      input_checked.addEventListener("click",(e)=>{
+         e.target.checked 
+            ? changeTheme(darkTheme) 
+            : changeTheme(ligthTheme) ;
+      })
+      
+      // document.documentElement.style.setProperty("--color","#fff");
+   </script>
+</body>
+</html>

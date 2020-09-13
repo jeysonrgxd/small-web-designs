@@ -1,0 +1,48 @@
+:root{
+   --bg-color:#f1f1f1;
+   --text-color:#333
+}
+
+*{
+   transition: .3s ease;
+}
+
+body {
+   
+   user-select: none;
+   background-color: var(--bg-color);
+}
+
+h1,p{
+   color: var(--text-color);
+}
+
+.checkbox{
+   display: none;
+}
+
+.switch {
+   width: 60px;
+   height: 33px;
+   background-color: gray;
+   border-radius: 20px;
+   display: block;
+   transition: .3s ease;
+   cursor: pointer;
+}
+
+.switch::before{
+   content:  '';
+   display: block;
+   width: 33px;
+   height: 33px;
+   border-radius: 50%;
+   background-color:royalblue;
+   transition: .2s ease;
+   
+}
+.checkbox:checked+label::before {
+   left: 100%;
+   transform: translateX(calc(100% - 5px));
+   /* right: 0; */
+}
