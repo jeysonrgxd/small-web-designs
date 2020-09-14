@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <h2>Zoom Image</h2>
+   <div class="container">
+      <img src="sistemasolarl.jpg" alt="">
+   </div>
+
+   <script>
+      let container = document.querySelector(".container")
+      let imgZoon = document.querySelector(".container img")
+      container.addEventListener("mousemove",(e)=>{
+         // console.log(e.clientX)
+         // console.log(e.clientY)
+         // console.log(e.offsetX, e.offsetY)
+         // console.log(e);
+         const x = e.offsetX
+         const y = e.offsetY
+
+         imgZoon.style.transformOrigin = `${x}px ${y}px`
+         imgZoon.style.transform = "scale(2.5)"
+      })
+
+      container.addEventListener("mouseleave",(e)=>{
+
+         imgZoon.style.transformOrigin ="center center"
+         imgZoon.style.transform = "scale(1)"
+
+      })
+
+
+
+   </script>
+</body>
+</html>
