@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<style>
+ body{
+background-color:#333;
+color:white;
+perspective: 200;
+}
+h1:hover{
+   transform-origin: center right;
+   transform:rotateY(45deg);
+}
+
+h1,h1 span{
+   transition: 2s ease;
+}
+h1.cambiar{
+   color:red
+
+}
+h1.cambiar span:nth-child(1){
+   color:blue
+
+}
+h1.cambiar span:nth-child(2){
+   color:green
+
+}
+</style>
+<body>
+   <h1>Ste<span>ven es</span> un go<span>rdo</span></h1>
+   <button onclick="cambiar()">Click</button>
+   <button onclick="saludar()">saludar</button>
+   <script>
+      function cambiar(){
+         document.querySelector("h1").classList.toggle("cambiar")
+      }
+      function saludar(){
+         alert("Hola estiven")
+      }
+   </script>
+</body>
+</html>
